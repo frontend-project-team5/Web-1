@@ -1,0 +1,39 @@
+.NavBar{
+    width: 95%;
+    height: 100vh;
+    overflow-x: auto;
+    border-radius: 3px;
+
+    padding: 0px;
+    padding-left: 2px;
+
+}
+
+li{
+    list-style-type:none;
+    
+}
+a:link, a:visited {
+
+  color:black;
+  margin-left: 20px ;
+  padding:9px 15px;
+
+  text-decoration: none;
+  display: inline-block;
+}
+a:current{
+    color: black;
+}
+a:hover{
+    color: white;
+    background-color:rgb(198, 228, 255);
+    border-radius: 10px;
+}
+
+@media screen and (max-width:993px) {
+    .NavBar{
+        overflow-x:hidden;
+        height:100%;
+    }
+}
