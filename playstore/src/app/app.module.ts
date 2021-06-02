@@ -14,6 +14,8 @@ import { MymoviesComponent } from './mymovies/mymovies.component';
 import { MygamesComponent } from './mygames/mygames.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { SigninComponent } from './signin/signin.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     MygamesComponent,
     HomeComponent,
     PagenotfoundComponent,
+    SigninComponent,
+    RegisterComponent,
 
   ],
   imports: [
