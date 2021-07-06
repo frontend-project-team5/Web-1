@@ -12,8 +12,7 @@ const routes: Routes = [
   {path:"myapps",component:MyappsComponent},
   {path:"mybooks",component:MybooksComponent},
   {path:"mymovies",component:MymoviesComponent},
-  {path:"games",component:GamesComponent}
-=======
+  {path:"games",component:GamesComponent},
   {path:"signin",component:SigninComponent}
 ];
 

@@ -35,7 +35,6 @@ import { CardComponent } from './card/card.component';
     PagenotfoundComponent,
     SigninComponent,
     RegisterComponent,
-
     GamesComponent,
     CardComponent,
 
