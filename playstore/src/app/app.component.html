@@ -1,14 +1,70 @@
 <app-header></app-header>
 <div class="container-fluid p-0">
-    <div class="row row-col-md-1 ">
-        <div class=" col-md-3 col-lg-3 ">
+    <div class="row g-0">
+        <div class="first  ">
          <app-sidebar></app-sidebar>
           </div>
-        <div class="col-md-9 col-lg-9 mt-3">
+        <div class="second" >
             <div >
-                <router-outlet></router-outlet>
+                <div id="sec">
+                  <router-outlet></router-outlet>
+                </div>
+                
+                <div class="dropdown-floating-button">
+                <div class="dropdown">
+                        <button  class="menu-btn btn-secondary btn" 
+                        (click)="changeBackground()" type="button" id="dropdownMenuButton1" 
+                        data-bs-toggle="dropdown" aria-expanded="false"  >
+                            &#9776;
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li class="nav-item" >
+                                    <a  class="nav-link"  routerLink="home" routerLinkActive="active" style="color:#9726fc"  >
+                                        <p class="d-inline " > Home</p> 
+                                      <span > <i class="fas fa-home pe-2" ></i></span>
+                                    </a>
+                                  </li>
+                                  
+                                <li class="nav-item">
+                                  <a class="nav-link"  routerLink="myapps" routerLinkActive="active" style="color:#fc268b">
+                                      <p class="d-inline " > Apps</p>  
+                                    <span > <i class="fas fa-grip-horizontal pe-2" ></i> </span>
+                                  </a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                  <a class="nav-link"  routerLink="mymovies" routerLinkActive="active" style="color:#2a3636">
+                                      <p class="d-inline " > Movies</p> 
+                                    <span > <i class="far fa-file-video pe-2" ></i></span>
+                                  </a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                  <a class="nav-link"  routerLink="mybooks" routerLinkActive="active" style="color:#7bfb09">
+                                      <p class="d-inline " > Books</p> 
+                                    <span > <i class="fas fa-book pe-2" ></i></span>
+                                  </a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                  <a class="nav-link"  routerLink="signin" routerLinkActive="active" style="color:#fc2b26">
+                                      <p class="d-inline " > signin</p> 
+                                    <span > <i class="fas fa-book pe-2" ></i></span>
+                                  </a>
+                                </li>
+                                
+                              </ul>
+                      </div>
+                     
+                </div>
             </div>
         </div>
     </div>
 </div>
-<app-footer></app-footer>
+
+<div id="footer">
+  <app-footer></app-footer>
+</div>
+
+
+
