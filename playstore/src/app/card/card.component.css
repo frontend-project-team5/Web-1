@@ -1,0 +1,20 @@
+p
+{
+    
+    font-family: 'Padauk', sans-serif;
+    color:rgb(172, 61, 47);
+}
+.card
+{
+    box-shadow: 3px 3px 3px black;
+    background-color: rgb(248, 244, 242);
+}
+h3{
+    font-family: 'Padauk', sans-serif;
+    color:cornsilk;
+}
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
