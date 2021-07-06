@@ -6,7 +6,7 @@
     height: 100vh;
     overflow-x: auto;
     border-radius: 3px;
-    background-color: #f67e7d;
+    background-color: #f1cfcf;
     padding: 0px;
 
 
@@ -22,7 +22,7 @@
     border: 4px solid black;
   }
 span:hover{
-    font-size: 35px;
+    font-size: 20px;
 }
 
 li{
@@ -31,7 +31,7 @@ li{
 }
 li:hover{
     background-color:white;
-    border-radius: 50px;
+    border-radius: 40px;
 }
 a:hover{
 
@@ -44,7 +44,7 @@ a:link, a:visited {
   margin-left: 20px ;
   padding:14px 15px;
    font-family: 'Roboto', sans-serif;
-   font-size:larger;
+   font-size:15px;
    
   /* text-decoration: none; */
   display: inline-block;
@@ -54,15 +54,10 @@ a:current{
 }
 
 
-/* @media screen and (max-width:993px) {
-    .NavBar{
-        overflow-x:hidden;
-        height:100vh;
-    }
-} */
+
 @media screen and (max-width:768px) {
     .NavBar{
         overflow-x:hidden;
-        height:100vh;
+       height: 100%;
     }
 }

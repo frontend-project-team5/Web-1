@@ -1,5 +1,6 @@
 <app-header></app-header>
 <div class="container-fluid p-0">
+
     <div class="row row-col-md-1 g-0">
         <div class=" col-md-3 col-lg-3 mt-2">
             <nav class="MAIN navbar-expand-md  "style="  position: -webkit-sticky;
@@ -62,6 +63,15 @@ position: sticky;top:0;">
         </div>
         <div class="col-md-9 col-lg-9 mt-2">
             <router-outlet></router-outlet>
+=======
+    <div class="row row-col-md-1 ">
+        <div class=" col-md-3 col-lg-3 ">
+         <app-sidebar></app-sidebar>
+          </div>
+        <div class="col-md-9 col-lg-9 mt-3">
+            <div >
+                <router-outlet></router-outlet>
+            </div>
         </div>
     </div>
 </div>
