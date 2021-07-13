@@ -18,6 +18,8 @@ import { SigninComponent } from './signin/signin.component';
 import { RegisterComponent } from './register/register.component';
 import { GamesComponent } from './games/games.component';
 import { CardComponent } from './card/card.component';
+import { GameappdisplayComponent } from './gameappdisplay/gameappdisplay.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,11 +39,13 @@ import { CardComponent } from './card/card.component';
     RegisterComponent,
     GamesComponent,
     CardComponent,
+    GameappdisplayComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

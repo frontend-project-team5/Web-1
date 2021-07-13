@@ -1,26 +1,34 @@
 
-<div class="box text-center">
+<div class=" box text-center">
   <div class="mainBox">
   <div class="card slide-in-elliptic-top-fwd mx-auto px-4 py-5" >
     <div class=" form-container sign-up-container">
-      <form action="#">
-        <h1>Create Account</h1>
+      <form #formreference="ngForm" (ngSubmit)="getUsersData(formreference)">
+        <h1>Sign In</h1>
         <div class="social-container d-flex justify-content-evenly">
           <a href="#" class="social" id="facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="social" id="google"><i class="fab fa-google-plus-g"></i></a>
           <a href="#" class="social" id="linkedin"><i class="fab fa-linkedin-in"></i></a>
         </div>
-        <span id="or">or use your email for registration</span>
+        <span id="or">or use your email for signin</span>
         <div id="Input">
-            <input type="text" placeholder=" Name" />
-            <input type="email" placeholder=" Email" />
-            <input type="password" placeholder=" Password" />
+            
+            <input type="email" placeholder=" Email" name="email" ngModel />
+            <input type="password" placeholder=" Password" name="password" ngModel/>
         </div>
-        <button>Sign Up</button>
+        <button type="submit">Sign In</button>
       </form>
 
+</div>
+<div class="d-block">
+  <li class="d-block float-end" >
+    <button class="btn" (click)="moveToSignup()" >
+        <p class="d-inline fs-5 "  > signup</p> 
+    </button>
+    </li>
 </div>
     </div>
 
   </div>
 </div>
+<router-outlet></router-outlet>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
-  constructor() { }
+  constructor(private RouTer:Router) { }
+
 
   ngOnInit(): void {
   }
-
+  moveToSignup(){
+    this.RouTer.navigateByUrl('signup')
+  }
+  getUsersData(formreference:NgForm){
+    let userData=formreference.value;
+    if(userData.email!="1@gmail.com" || userData.password!="123"){
+      alert("invalid credentials");
+    }    
+    else{
+      // localStorage.setItem("username",userData.email);
+    }
+  }
 }

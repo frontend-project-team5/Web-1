@@ -1,46 +1,13 @@
-  
-<div class="card  h-100   " >
-    <img src={{pro.thumbnail}}  class="card-img-top  w-100"alt="">
-    <div class="card-body ">  
-       <p class="h4">{{pro.title}}</p>  
-       <!--    
-        <p  class=" mt-3 ">{{pro.short_description}}
-            
-        </p> --> 
-        <p class="text-dark fs-5 ">Category:{{pro.genre}}
-            
-        </p>
-        <p class="text-muted ">Since {{pro.release_date}}<br>
-        platform - {{pro.platform}}
-        </p>
-        <!-- Button trigger modal -->
-<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal1" id="modalToggle"  (click)="afterCreatingNewCard()">
-   view
-  </button>
-</div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">{{pro.title}}</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-         {{pro.short_description}}
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-info">
-              <a href={{pro.freetogame_profile_url}} target="_blank">play online</a>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="card  "  >
+  <a type="button" (click)="getDetailsOfGame(pro.id)" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{pro.title}}"><img src={{pro.thumbnail}}  class="card-img-top  w-100"alt="{{pro.title}}" ></a> 
     
+    <div class="card-body " data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{pro.title}}">  
+      
+       <div class="name">
+        <a type="button" (click)="getDetailsOfGame(pro.id)"><h3 >{{pro.title}}</h3> </a> 
+       </div>
+    </div>
+    <!-- <p class="text-muted">{{pro.developer}} </p> -->
 
 </div>
-
-
+    
