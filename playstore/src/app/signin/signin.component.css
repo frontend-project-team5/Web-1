@@ -8,7 +8,7 @@
     padding:20px 10px;
   }
   .card{
-    width:30em;
+    width:800px;
     border-radius: 20px;
   }
 
@@ -43,6 +43,8 @@
 
 .social{
   transition:  transform 0.5s;
+  padding: 20px;
+  font-size: 20px;
 }
 
 
@@ -87,15 +89,15 @@ span {
 }
 
 #or{
-  font-size: .9em;
+  font-size: 20px;
   font-family: 'Montserrat', sans-serif;
 }
 
 input{
   display: block;
-  margin:1em auto;
-  width:20em;
-  height: 2.5em;
+  margin:40px auto;
+  width:550px;
+  height: 50px;
   border: none;
   border-radius: 4px;
   text-emphasis-color: black;
@@ -107,6 +109,7 @@ input:hover{
   transform: scale(1.1,1.2);
 }
 button{
+  font-size: 20px;
   display: block;
   margin: auto;
   margin-top: 10px;
@@ -127,23 +130,46 @@ button{
     padding-right: 2px;
 }
 
+
+@media screen and  (max-width:1200px)  {
+    
+  .card{
+      width:550px;
+      
+  }
+  input{
+    width: 25em;
+  }
+}
+
 @media screen and  (max-width:500px)  {
     
     .card{
-        width:300px;
+        width:350px;
 
     }
+    .social{
+      font-size: 15px;
+    }
+    #or{
+      font-size: 15px;
+    }
     input{
-      width: 12em;
+      width: 280px;
     }
 }
 
-@media screen and  (max-width:300px)  {
+@media screen and  (max-width:350px)  {
     
     .card{
         width:250px;
     }
-
+    input{
+      width: 200px;
+    }
+    button{
+      font-size: 15px;
+    }
 }
 
  @-webkit-keyframes slide-in-elliptic-top-fwd {

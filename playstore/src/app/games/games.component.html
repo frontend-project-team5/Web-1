@@ -1,7 +1,49 @@
-<h1 class="text-center">Top Sellers</h1>
-<div class="row row-cols-1 row-cols-sm-2  row-cols-md-2 row-cols-lg-4 g-4 mt-5  ne-3">
+
+<form #gameReference="ngForm" (ngSubmit)="gameFilter(gameReference)">
+<div class="row pt-3 px-3">
+    <div class="col-6 col-sm-3">
+        <span class="mr-1 text-muted">Platform:</span>
+        
+        <select  name="platform" class="form-select"  ngModel >
+            <option  value="all">ALl platforms</option>
+            <option value="pc">Pc</option>
+            <option value="browser">Browser</option>
+        </select>
+          <br>
+    </div>
+    <div class="col-6 col-sm-3">
+        <span class="mr-1 text-muted">Genere/tag</span>
+        <select name="category"class="form-select"  ngModel >
+            <option value="">all</option>
+            <option *ngFor="let tag of tags"  value={{tag}}>
+                {{tag}}
+            </option>
+        </select>    
+    </div>
+    <div class="col-6 col-sm-3">
+
+            <span class="text-muted mr-1">Sort By: </span> 
+        
+        <select name="sort-by" class="form-select" ngModel >
+            <option value="relevance" selected>Relevance</option>
+            <option value="popularity">Popularity</option>
+            <option value="release-date">Release Date</option>
+            <option value="alphabetical">Alphabetical</option>
+        </select>
+    </div>
+    <div class="col col-sm-3">
+        <br>
+        <button type="submit">Submit</button>
+        
+    </div>
+</div>
+</form>
+
+
+<div class="row row-cols-1 row-cols-sm-2  row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-4 g-4 mt-5  ne-3">
 <div *ngFor="let a of gameslist" class="col">
 
  <app-card [pro]=a ></app-card>
+ <p style="color: rgb(255, 255, 255);">apple</p>
 </div>
 </div>

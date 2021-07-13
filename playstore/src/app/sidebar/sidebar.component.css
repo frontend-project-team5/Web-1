@@ -11,15 +11,8 @@ ul{
     color:#189ab4;
   }
 
- 
-
-.nav-item{
-    transition: transform 0.5s;
-}
 
 .nav-item:hover{
-    transform:translateY(4px);
-    background-color: aquamarine;
-    border-top-right-radius: 10%;
-    border-bottom-right-radius:10% ;
+    transform:scale(1.1);
+    transition-duration: 0.2s;
 }

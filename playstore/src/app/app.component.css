@@ -6,16 +6,19 @@
 }
 .second{
     width: calc(100% - 200px);
-    
+    padding-top: 64px;
 }
-.dropdown-floating-button{
+.accordion{
     display: none;;
 }
 
-.dropdown-menu{
-    background-color: #11ffee00;
-    border:1px solid transparent;
+
+li{
+    list-style: none;
+    transition: transform 0.5s;
 }
+
+
 .nav-item a{
 text-align: right;
 }
@@ -34,22 +37,60 @@ text-align: right;
     font-size: 20px;
 }
 
-@media screen and (max-width:768px) {
-
-    .btn{
-        display: block;
-    position:fixed;
-    right: 40px;
-    bottom: 40px;
-    }
-
-    .dropdown-floating-button{
-    display: block;
-    width:200px;
-    }
+button:hover,li:hover{
+    transform: scale(1.1);
 }
 
+
+button[aria-expanded="true"]::after{
+    content: "x";
+    padding: 10px 14px;
+    display: flex;
+}
+button[aria-expanded="false"]::before{
+    content: "\2261";
+    padding: 10px 12px;
+    display: flex;
+    
+}
 @media screen and (max-width:768px) {
+
+    button{
+        display: block;
+        font-size: 30px;
+        font-weight: bolder;
+        background-color: #0276e8;
+        color: #fff;
+        border-radius: 50%;
+        border: none;
+        box-shadow: none;
+    position:fixed;
+    right: 40px;
+    bottom: 35px;
+    transition: transform 0.5s;
+    }
+
+
+    .accordion{
+    display: block;
+
+    }
+    .accordion-item{
+        width:200px;
+        padding:0px;
+        position: fixed;
+        right: 15px;
+        bottom: 95px;
+        background-color:#fff;
+        border-radius: 10px;
+        
+    }
+    .accordion-body{
+        padding: 0px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
 .first{
     display: none;
 }

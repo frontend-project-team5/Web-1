@@ -10,14 +10,73 @@
                   <router-outlet></router-outlet>
                 </div>
                 
-                <div class="dropdown-floating-button">
-                <div class="dropdown">
-                        <button  class="menu-btn btn-secondary btn" 
-                        (click)="changeBackground()" type="button" id="dropdownMenuButton1" 
-                        data-bs-toggle="dropdown" aria-expanded="false"  >
-                            &#9776;
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ul>
+                          <li class="nav-item" >
+                              <a  class="nav-link"  routerLink="home" routerLinkActive="active" style="color:#9726fc"  >
+                                  <p class="d-inline " > Home</p> 
+                                <span > <i class="fas fa-home pe-2" ></i></span>
+                              </a>
+                            </li>
+                            
+                          <li class="nav-item">
+                            <a class="nav-link"  routerLink="myapps" routerLinkActive="active" style="color:#fc268b">
+                                <p class="d-inline " > Apps</p>  
+                              <span > <i class="fas fa-grip-horizontal pe-2" ></i> </span>
+                            </a>
+                          </li>
+                          
+                          <li class="nav-item">
+                            <a class="nav-link"  routerLink="mymovies" routerLinkActive="active" style="color:#2a3636">
+                                <p class="d-inline " > Movies</p> 
+                              <span > <i class="far fa-file-video pe-2" ></i></span>
+                            </a>
+                          </li>
+                          
+                          <li class="nav-item">
+                            <a class="nav-link"  routerLink="mybooks" routerLinkActive="active" style="color:#7bfb09">
+                                <p class="d-inline " > Books</p> 
+                              <span > <i class="fas fa-book pe-2" ></i></span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link"  routerLink="games" routerLinkActive="active" style="color:#268bfc">
+                              <p class="d-inline  "  > games</p> 
+                              <span ><i class="fas fa-gamepad pe-2"   ></i></span>
+                              </a>
+                            </li>
+                          <li class="nav-item">
+                            <a class="nav-link"  routerLink="signin" routerLinkActive="active" style="color:#fc2b26">
+                                <p class="d-inline " > signin/signup</p> 
+                              <span > <i class="fas fa-user pe-2" ></i></span>
+                            </a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                    </div>
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class=" " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        
+                      </button>
+                    </h2>
+              
+                  </div>
+              
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+  <app-footer></app-footer>
+</div>
+
+<!--                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                 <li class="nav-item" >
                                     <a  class="nav-link"  routerLink="home" routerLinkActive="active" style="color:#9726fc"  >
                                         <p class="d-inline " > Home</p> 
@@ -45,26 +104,18 @@
                                     <span > <i class="fas fa-book pe-2" ></i></span>
                                   </a>
                                 </li>
-                                
+                                <li class="nav-item">
+                                  <a class="nav-link"  routerLink="games" routerLinkActive="active" style="color:#268bfc">
+                                    <p class="d-inline  "  > games</p> 
+                                    <span ><i class="fas fa-gamepad pe-2"   ></i></span>
+                                    </a>
+                                  </li>
                                 <li class="nav-item">
                                   <a class="nav-link"  routerLink="signin" routerLinkActive="active" style="color:#fc2b26">
-                                      <p class="d-inline " > signin</p> 
-                                    <span > <i class="fas fa-book pe-2" ></i></span>
+                                      <p class="d-inline " > signin/signup</p> 
+                                    <span > <i class="fas fa-user pe-2" ></i></span>
                                   </a>
                                 </li>
                                 
-                              </ul>
-                      </div>
-                     
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="footer">
-  <app-footer></app-footer>
-</div>
-
-
+                              </ul> -->
 
