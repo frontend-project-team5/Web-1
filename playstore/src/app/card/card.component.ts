@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 import { displaygame } from '../Models/displaygame.model';
 
 @Component({
@@ -31,4 +32,15 @@ export class CardComponent implements OnInit {
       console.log(id);
       this.ROUTER.navigateByUrl('/'+id);
     }
+
+    playVerify(url:string){
+      if(localStorage.getItem("email")==null){
+        alert("Signin to play game")
+        this.ROUTER.navigateByUrl("signin");
+      }
+      else{
+      this.ROUTER.navigateByUrl(url);
+      }
+    }
+
 }

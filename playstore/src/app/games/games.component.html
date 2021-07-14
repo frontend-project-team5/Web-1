@@ -84,6 +84,9 @@
     <p style="color: rgb(255, 255, 255);">apple</p>
   </div>
 </div>
+<h1 *ngIf="!gameList.length">
+  nogames Found
+</h1>
 
 <div class="text-center">
   <pagination-controls (pageChange)="p=$event"></pagination-controls>

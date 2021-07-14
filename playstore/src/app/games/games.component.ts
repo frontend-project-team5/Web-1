@@ -43,11 +43,11 @@ export class GamesComponent implements OnInit {
      this.usab=this.obj.getGamesData().subscribe(
       res=>{
         this.gameList=res;
-        console.log(this.gameListForCorsal)
+      },
+      err=>{
+        console.log("error is",err);
       }
     )
-    
-
   }
 
   gameFilter() {
@@ -62,5 +62,6 @@ export class GamesComponent implements OnInit {
       }
     )
   }
+
 
 }
