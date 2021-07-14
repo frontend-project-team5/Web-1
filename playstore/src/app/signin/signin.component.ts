@@ -17,12 +17,14 @@ export class SigninComponent implements OnInit {
     this.RouTer.navigateByUrl('signup')
   }
   getUsersData(formreference:NgForm){
-    let userData=formreference.value;
+    let userData=formreference.value;    
     if(userData.email!="1@gmail.com" || userData.password!="123"){
       alert("invalid credentials");
     }    
     else{
-      // localStorage.setItem("username",userData.email);
+      localStorage.setItem("email",userData.email);
+      this.RouTer.navigateByUrl('/home');
+      formreference.reset();
     }
   }
 }

@@ -3,7 +3,7 @@
     <div class="mainBox">
     <div class="card slide-in-elliptic-top-fwd mx-auto px-4 py-5" >
       <div class=" form-container sign-up-container">
-        <form action="#">
+        <form #formreference="ngForm" (ngSubmit)="formreference.form.valid && getUsersData(formreference)">
           <h1>Create Account</h1>
           <div class="social-container d-flex justify-content-evenly">
             <a href="#" class="social" id="facebook"><i class="fab fa-facebook-f"></i></a>
@@ -12,9 +12,16 @@
           </div>
           <span id="or">or use your email for registration</span>
           <div id="Input">
-              <input type="text" placeholder=" Name" />
-              <input type="email" placeholder=" Email" />
-              <input type="password" placeholder=" Password" />
+              <input type="text" placeholder=" Name" name="name" ngModel required #refname="ngModel" />
+              <p class="warnings" *ngIf="(formreference.submitted || refname.touched)&&(refname.errors?.required)">*
+                username is required</p>
+              <input type="email" placeholder=" Email" name="email" ngModel required #refemail="ngModel" />
+              <p class="warnings" *ngIf="(formreference.submitted || refemail.touched)&&(refemail.errors?.required)">*
+                email is required</p>
+              <input type="password" placeholder=" Password" name="password" ngModel required #refpassword="ngModel" minlength="8"/>
+              <p class="warnings"
+              *ngIf="(formreference.submitted || refpassword.touched)&&(refpassword.errors?.required)">* password is
+              required</p>
           </div>
           <button>Sign Up</button>
         </form>

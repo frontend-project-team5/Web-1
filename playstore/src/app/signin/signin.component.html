@@ -1,32 +1,37 @@
-
 <div class=" box text-center">
   <div class="mainBox">
-  <div class="card slide-in-elliptic-top-fwd mx-auto px-4 py-5" >
-    <div class=" form-container sign-up-container">
-      <form #formreference="ngForm" (ngSubmit)="getUsersData(formreference)">
-        <h1>Sign In</h1>
-        <div class="social-container d-flex justify-content-evenly">
-          <a href="#" class="social" id="facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social" id="google"><i class="fab fa-google-plus-g"></i></a>
-          <a href="#" class="social" id="linkedin"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <span id="or">or use your email for signin</span>
-        <div id="Input">
-            
-            <input type="email" placeholder=" Email" name="email" ngModel />
-            <input type="password" placeholder=" Password" name="password" ngModel/>
-        </div>
-        <button type="submit">Sign In</button>
-      </form>
+    <div class="card slide-in-elliptic-top-fwd mx-auto px-4 py-5">
+      <div class=" form-container sign-up-container">
+        <form #formreference="ngForm" (ngSubmit)="formreference.form.valid && getUsersData(formreference)">
+          <h1>Sign In</h1>
+          <div class="social-container d-flex justify-content-evenly">
+            <a href="#" class="social" id="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social" id="google"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social" id="linkedin"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span id="or">or use your email for signin</span>
+          <div id="Input">
 
-</div>
-<div class="d-block">
-  <li class="d-block float-end" >
-    <button class="btn" (click)="moveToSignup()" >
-        <p class="d-inline fs-5 "  > signup</p> 
-    </button>
-    </li>
-</div>
+            <input type="email" placeholder=" Email" name="email" ngModel required #refemail="ngModel" />
+            <p class="warnings" *ngIf="(formreference.submitted || refemail.touched)&&(refemail.errors?.required)">*
+              username is required</p>
+            <input type="password" placeholder=" Password" name="password" ngModel required #refpassword="ngModel" />
+            <p class="warnings"
+              *ngIf="(formreference.submitted || refpassword.touched)&&(refpassword.errors?.required)">* password is
+              required</p>
+
+          </div>
+          <button type="submit">Sign In</button>
+        </form>
+
+      </div>
+      <div class="d-block">
+        <li class="d-block float-end">
+          <button class="btn" (click)="moveToSignup()">
+            signup
+          </button>
+        </li>
+      </div>
     </div>
 
   </div>

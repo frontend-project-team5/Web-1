@@ -34,8 +34,8 @@
                  <hr class="mt-2 mb-3">
                  <div class="row text-center text-lg-left">
                     <div *ngFor="let imageid of gamedata.screenshots;let ind=index " class="col-lg-4 col-md-4 col-6">
-                       <a href="{{imageid.image}} " data-lity class="d-block mb-3 h-100" >
-                           <img class="thumb-gallery shadow-sm rounded" src="{{imageid.image}}" alt="{{imageid.image}} Thumbnail {{ind}} ">
+                       <a href="{{gamedata.screenshots[ind].image}} " data-lity class="d-block mb-3 h-100" >
+                           <img class="thumb-gallery shadow-sm rounded" src="{{gamedata.screenshots[ind].image}}" alt="{{imageid.image}} Thumbnail {{ind+1}} ">
                         </a>
                      </div>
                 </div>

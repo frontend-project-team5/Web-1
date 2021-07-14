@@ -11,7 +11,48 @@ import { gameattributes } from '../Models/game.model';
 })
 export class GameappdisplayComponent implements OnInit {
 
-  gamedata :any;
+  gamedata :gameattributes={
+    id: "",
+    title: "",
+    thumbnail: "",
+    status: "",
+    short_description: "",
+    description: "",
+    game_url: "",
+    genre: "",
+    platform: "",
+    publisher: "",
+    developer: "",
+    release_date: "",
+    freetogame_profile_url: "",
+    minimum_system_requirements: {
+        os: "",
+        processor: "",
+        memory: "",
+        graphics: "",
+        storage: "",
+    },
+    screenshots: [
+       {
+            id: "",
+            image: ""
+        },
+        {
+            id: "",
+            image: ""
+        },
+
+         {
+            id: "",
+            image: ""
+        },
+         {
+            id: "",
+            image: ""
+        }
+      ]
+  };
+  // gamedata:any;
   UserSubscription:any;
   constructor(private ActivRouter:ActivatedRoute,private Ser2:GamesService) { }
 
@@ -19,7 +60,8 @@ export class GameappdisplayComponent implements OnInit {
     let ind=this.ActivRouter.snapshot.params.id;
    this.UserSubscription= this.Ser2.SendGamesData(ind).subscribe(
       UserObjet =>{
-        this.gamedata=UserObjet
+        this.gamedata=UserObjet;
+        console.log(UserObjet);
       },
       err=>{
         console.log('Erroen eccored ' ,err);
