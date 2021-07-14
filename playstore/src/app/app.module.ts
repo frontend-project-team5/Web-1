@@ -20,6 +20,8 @@ import { GamesComponent } from './games/games.component';
 import { CardComponent } from './card/card.component';
 import { GameappdisplayComponent } from './gameappdisplay/gameappdisplay.component';
 import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './search.pipe';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

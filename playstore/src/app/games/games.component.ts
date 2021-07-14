@@ -13,7 +13,11 @@ import { displaygame } from '../Models/displaygame.model';
 })
 export class GamesComponent implements OnInit {
 
-  gameList= new Observable<displaygame[]>();
+  searchItem:string="";
+  // gameList= new Observable<displaygame[]>();
+  
+  p=1;
+  gameList:Array<displaygame>=[];
   gameListForCorsal:Array<displaygame>=[];
   gameCategory:string="racing";
   gamePlatform:string="all";
@@ -34,11 +38,11 @@ export class GamesComponent implements OnInit {
  
   ngOnInit(): void {
     
-    this.gameList = this.obj.getGamesData();
+    // this.gameList = this.obj.getGamesData();
 
      this.usab=this.obj.getGamesData().subscribe(
       res=>{
-        this.gameListForCorsal=res.slice(1,6);
+        this.gameList=res;
         console.log(this.gameListForCorsal)
       }
     )
@@ -50,7 +54,13 @@ export class GamesComponent implements OnInit {
     this.alpha.platform=this.gamePlatform;
     this.alpha.category=this.gameCategory;
     this.alpha['sort-by']=this.gameSortby;
-    this.gameList = this.obj.getGamesByoption(this.alpha)
+    // this.gameList = this.obj.getGamesByoption(this.alpha);
+    this.usab=this.obj.getGamesByoption(this.alpha).subscribe(
+      res=>{
+        this.gameList=res;
+        console.log(this.gameListForCorsal)
+      }
+    )
   }
 
 }

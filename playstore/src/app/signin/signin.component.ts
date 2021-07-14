@@ -20,10 +20,14 @@ export class SigninComponent implements OnInit {
     let userData=formreference.value;    
     if(userData.email!="1@gmail.com" || userData.password!="123"){
       alert("invalid credentials");
+      
+      
     }    
     else{
       localStorage.setItem("email",userData.email);
+      console.log(userData);
       this.RouTer.navigateByUrl('/home');
+      
       formreference.reset();
     }
   }

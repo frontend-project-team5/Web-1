@@ -53,6 +53,9 @@ button[aria-expanded="false"]::before{
     display: flex;
     
 }
+.active{
+    background-color: lightpink;
+}
 @media screen and (max-width:768px) {
 
     button{
