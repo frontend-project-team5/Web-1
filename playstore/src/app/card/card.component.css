@@ -33,3 +33,13 @@ h3{
     width: 100%;
     object-fit: cover;
 }
+.saveToLibrary:hover{
+    color:#9726fc;
+    
+    
+}
+.saveToLibrary{
+   font-size: 25px;
+    color: black;
+    
+}

@@ -1,13 +1,20 @@
-<div class="card  "  >
-  <a type="button" (click)="getDetailsOfGame(pro.id)" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{pro.title}}"><img src={{pro.thumbnail}}  class="card-img-top  w-100"alt="{{pro.title}}" ></a> 
-    
-    <div class="card-body " data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{pro.title}}">  
-      
-       <div class="name">
-        <a type="button" (click)="getDetailsOfGame(pro.id)"><h3 >{{pro.title}}</h3> </a> 
-       </div>
+<div class="card  ">
+  <a type="button" (click)="getDetailsOfGame(pro.id)" data-bs-toggle="tooltip" data-bs-placement="bottom"
+    title="{{pro.title}}"><img src={{pro.thumbnail}} class="card-img-top  w-100" alt="{{pro.title}}">
+  </a>
+
+  <div class="card-body " >
+
+    <div class="name" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{pro.title}}">
+      <a type="button" (click)="getDetailsOfGame(pro.id)">
+        <h3>{{pro.title}}</h3>
+      </a>
     </div>
-    <!-- <p class="text-muted">{{pro.developer}} </p> -->
+    <div class="d-flex justify-content-between" >
+      <a type="button" class="playbtn" href="{{pro.freetogame_profile_url}}" >Play</a>
+    <a class="saveToLibrary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Save to Library"><i class="fas fa-cart-plus"></i></a>
+    </div>
+  </div>
+
 
 </div>
-    
