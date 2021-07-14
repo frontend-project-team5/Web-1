@@ -18,24 +18,24 @@ export interface gameattributes {
         memory: string,
         graphics: string,
         storage: string,
-    }
-    screenshots: {
-        image1: {
+    },
+    screenshots: [
+         {
             id: string,
             image: string
         },
-        image2: {
+         {
             id: string,
             image: string
         },
 
-        image3: {
+         {
             id: string,
             image: string
         },
-        image4: {
+         {
             id: string,
             image: string
         }
-    }
+    ]
 }

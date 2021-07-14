@@ -1,45 +1,50 @@
-
 <div style="  position: -webkit-sticky; position: sticky;top:64px;">
   <ul class="" style="background-color: #ffff;">
     <br>
     <li class="nav-item">
-        <a class="nav-link"  routerLink="home" routerLinkActive="active" style="color:#9726fc">
-          <span ><i class="fas fa-home pe-2 " style="font-size: 1.5em;"></i></span>
-          <p class="d-inline  fs-5 " > Home</p> 
-        </a>
-      </li>
-
-    <li class="nav-item">
-      <a class="nav-link"  routerLink="myapps" routerLinkActive="active"  style="color:#fc268b">
-        <span ><i class="fas fa-grip-horizontal pe-2 " style="font-size: 1.5em;"></i> </span>
-        <p class="d-inline fs-5 "  > Apps</p>  
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link"  routerLink="mymovies" routerLinkActive="active" style="color:#2a3636">
-        <span ><i class="far fa-file-video pe-2" style="font-size: 1.5em;"></i></span>
-        <p class="d-inline fs-5 "  > Movies</p> 
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link"  routerLink="mybooks" routerLinkActive="active" style="color:#7bfb09">
-        <span ><i class="fas fa-book pe-2" style="font-size: 1.5em;"></i></span>
-        <p class="d-inline fs-5 "  > Books</p> 
+      <a class="nav-link" routerLink="home" routerLinkActive="active" style="color:#9726fc">
+        <span><i class="fas fa-home pe-2 " style="font-size: 1.5em;"></i></span>
+        <p class="d-inline  fs-5 "> Home</p>
       </a>
     </li>
 
     <li class="nav-item">
-    <a class="nav-link"  routerLink="games" routerLinkActive="active" style="color:#268bfc">
-        <span ><i class="fas fa-gamepad pe-2"   ></i></span>
-        <p class="d-inline fs-5 "  > games</p> 
+      <a class="nav-link" routerLink="myapps" routerLinkActive="active" style="color:#fc268b">
+        <span><i class="fas fa-grip-horizontal pe-2 " style="font-size: 1.5em;"></i> </span>
+        <p class="d-inline fs-5 "> Apps</p>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link"  routerLink="signin" routerLinkActive="active" style="color:#fc2b26">
-          <span ><i class="fas fa-user pe-2"style="font-size: 1.5em;"></i></span>
-          <p class="d-inline fs-5 "  > Signin</p> 
-        </a>
-      </li>
+      <a class="nav-link" routerLink="mymovies" routerLinkActive="active" style="color:#2a3636">
+        <span><i class="far fa-file-video pe-2" style="font-size: 1.5em;"></i></span>
+        <p class="d-inline fs-5 "> Movies</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="mybooks" routerLinkActive="active" style="color:#7bfb09">
+        <span><i class="fas fa-book pe-2" style="font-size: 1.5em;"></i></span>
+        <p class="d-inline fs-5 "> Books</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" routerLink="games" routerLinkActive="active" style="color:#268bfc">
+        <span><i class="fas fa-gamepad pe-2"></i></span>
+        <p class="d-inline fs-5 "> games</p>
+      </a>
+    </li>
+    <li class="nav-item" *ngIf="!dob.getUserLoginStatus()">
+      <a class="nav-link"  routerLink="signin" routerLinkActive="active" style="color:#FD0048">
+        <span><i class="fas fa-user pe-2" style="font-size: 1.5em;"></i></span>
+        <p class="d-inline fs-5 "> Signin/Signup</p>
+      </a>
+    </li>
+    <li class="nav-item" *ngIf="dob.getUserLoginStatus()">
+      <a class="nav-link"  routerLink="signin" routerLinkActive="active" style="color:#ff8100" (click)="dob.userLogout()">
+        <span><i class="fas fa-user pe-2" style="font-size: 1.5em;" ></i></span>
+        <p class="d-inline fs-5 ">Signout</p>
+      </a>
+    </li>
   </ul>
-  
+
 </div>

@@ -16,16 +16,10 @@
 
   .box{
     display: flex;
-    /* width: 100%; */
-    /* height: 100vh; */
     align-items: center;
     justify-content: center;
     background-color: #f6f5f7;
     background:aliceblue;
-
-    
-    
-
   }
 
 .social-container a{
@@ -40,6 +34,13 @@
 	width: 3em;
 
   }
+.warnings{
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  color: tomato;
+}
 
 .social{
   transition:  transform 0.5s;
@@ -47,12 +48,12 @@
   font-size: 20px;
 }
 
-
 #facebook:hover{
   color:#f6f5f7;
   background-color:dodgerblue;
   transform:translateY(-10px);
 }
+
 #google{
   color:rgb(218, 61, 61);
 }
@@ -66,15 +67,12 @@
   color:#f6f5f7;
   background-color:dodgerblue;
   transform:translateY(-10px);
- 
 }
 
 button:hover{
   transform:translateY(5px);
   box-shadow:2px black;
-
 }
-
 
 a:link{
   text-decoration: none;
@@ -95,7 +93,7 @@ span {
 
 input{
   display: block;
-  margin:40px auto;
+  margin:40px auto 0px;
   width:550px;
   height: 50px;
   border: none;
@@ -106,7 +104,7 @@ input{
   transition:transform 0.5s;
 }
 input:hover{
-  transform: scale(1.1,1.2);
+  transform: scale(1.05);
 }
 button{
   font-size: 20px;

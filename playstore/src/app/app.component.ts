@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
 
 
 @Component({
@@ -9,6 +10,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'playstore';
 
+  constructor(public dob:DataService){
+
+  }
 
   
 }
