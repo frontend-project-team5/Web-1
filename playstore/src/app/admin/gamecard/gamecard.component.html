@@ -1,0 +1,22 @@
+<div class="card  ">
+    <a type="button" (click)="getDetailsOfGame(pro.id)" data-bs-toggle="tooltip" data-bs-placement="bottom"
+      title="{{pro.title}}"><img src={{pro.thumbnail}} class="card-img-top  w-100" alt="{{pro.title}}">
+    </a>
+  
+    <div class="card-body " >
+  
+      <div class="name" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{pro.title}}">
+        <a type="button" (click)="getDetailsOfGame(pro.id)">
+          <h3>{{pro.title}}</h3>
+        </a>
+      </div>
+      <div class="d-flex justify-content-between" >
+        <a  type="button" class="playbtn"  (click)="playVerify(pro.freetogame_profile_url)">Play</a>
+        <a class="icon" id="edit"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit" (click)="editgame(pro.id)" ><i class="fas fa-edit"></i></a>
+        <a class="icon" id="delete"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"><i class="fas fa-trash"  ></i></a>
+        <!-- <a class=" saveToLibrary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Save to Library"><i class="fas fa-cart-plus"></i></a> -->
+      </div>
+    </div>
+  
+  
+  </div>

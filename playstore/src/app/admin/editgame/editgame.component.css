@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.container{
+    width: 90%;
+}
+
+.screenshots{
+    display: inline;
+    
+}
+p{
+    font-size: 23px;
+}
+ img{
+
+    width: 100%;   
+}
+span{
+    font-size: 18px;;
+}
+#buttoncollapse[aria-expanded="false"]::before{
+    content: "+ Read More";
+}
+
+#buttoncollapse[aria-expanded="true"]::before{
+    content: "- Read Less";
+}
+
+button{
+    font-size: 20px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: transparent;
+    font-weight: bold;
+    border-color: #268bfc;
+    box-shadow: #268bfc;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: #268bfc;
+}
+
+button:hover{
+    transform: scale(1.01);
+}
+
+.head{
+    display: inline;
+}
+.detail{
+    display: inline;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:1200px) {
+    p,button{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:756px) {
+    p,button{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    p,button{
+        font-size: 16px;
+    }
+    span{
+        font-size: 15px;
+    }
+}

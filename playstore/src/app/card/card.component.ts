@@ -39,7 +39,7 @@ export class CardComponent implements OnInit {
         this.ROUTER.navigateByUrl("signin");
       }
       else{
-      this.ROUTER.navigateByUrl(url);
+      window.open(url);
       }
     }
     onCart(product){

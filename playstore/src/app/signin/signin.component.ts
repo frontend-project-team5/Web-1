@@ -18,6 +18,23 @@ export class SigninComponent implements OnInit {
     this.router.navigateByUrl('signup')
   }
   getUsersData(formreference:NgForm){
+
+//     let userData=formreference.value;   
+    
+//     if(userData.email=="admin@gmail.com" && userData.password=="admin"){
+//       localStorage.setItem("email",userData.email);
+//       this.RouTer.navigateByUrl('admin');
+
+//     }
+//     else if(userData.email!="1@gmail.com" || userData.password!="123"){
+//       alert("invalid credentials");  
+//     }    
+//     else{
+//       localStorage.setItem("email",userData.email);
+//       console.log(userData);
+//       this.RouTer.navigateByUrl('/home');
+//       formreference.reset();
+//     }
     let userData=formreference.value;    
     this.dsobj.onlogin(userData).subscribe(
       res=>{

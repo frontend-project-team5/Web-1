@@ -22,6 +22,9 @@
               <p class="warnings"
               *ngIf="(formreference.submitted || refpassword.touched)&&(refpassword.errors?.required)">* password is
               required</p>
+              <p class="warnings"
+              *ngIf="(formreference.submitted || refpassword.touched)&&(refpassword.errors?.minlength)">* password length should be alleast 8
+              </p>
           </div>
           <button type="submit">Sign Up</button>
         </form>

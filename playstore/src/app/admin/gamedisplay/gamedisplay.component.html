@@ -1,0 +1,80 @@
+<div class="main  py-5 my-6">
+   <div class="gameprofile_background">
+      <div class="gameprofile_gradient"></div>
+   </div>
+   <div class="row row-cols-1 ">
+      <div class=" col-xl-4">
+         <div class="sidebar control-box">
+            <div class="card shadow mb-3 rounded">
+               <img class="img2 card-img-top progressive replace" width="100%" src="{{gamedata.thumbnail}} " alt="">
+            </div>
+         </div>
+      </div>
+      <div class=" col-xl-8">
+         <span class="small"><a class="nocolor" href="/">Home</a> &gt; <a class="nocolor" href="/games">Games</a> &gt;
+            <span class="text-muted">{{gamedata.title}}</span></span>
+         <br>
+         <h1>{{gamedata.title}}</h1>
+         <div id="submitReview" class="anchor mt-3">
+            <p class="  ">{{gamedata.short_description}}</p>
+            <p class="collapse   " id="discriptionCollapse">{{gamedata.description}}</p>
+            <button id="buttoncollapse" class="collapsed " data-bs-toggle="collapse"
+               data-bs-target="#discriptionCollapse" aria-expanded="false" aria-controls="discriptionCollapse"></button>
+            <h3 class="mt-5">Additional Information</h3>
+            <hr class="mt-2 mb-3">
+            <div class="row mb-3">
+               <div class="col-6 col-md-4"> <span class="text-muted">Title<br></span>
+                  <p>{{gamedata.title}}</p>
+               </div>
+               <div class="col-6 col-md-4"> <span class="text-muted">Developer<br></span>
+                  <p>{{gamedata.developer}}</p>
+               </div>
+               <div class="col-6 col-md-4"> <span class="text-muted">Publisher<br></span>
+                  <p>{{gamedata.publisher}}</p>
+               </div>
+               <div class="col-6 col-md-4"> <span class="text-muted">Release Date<br></span>
+                  <p>{{gamedata.release_date}}</p>
+               </div>
+               <br>
+               <div class="col-6 col-md-4"> <span class="text-muted">Genre<br></span>
+                  <p>{{gamedata.genre}}</p>
+               </div>
+               <div class="col-6 col-md-4"> <span class="text-muted">Platform<br></span>
+                  <p>{{gamedata.platform}} </p>
+               </div>
+            </div>
+            <h3 class="font-weight-dark text-center text-lg-left mt-5 mb-0">{{gamedata.title}} Screenshots</h3>
+            <hr class="mt-2 mb-3">
+            <div class="row text-center text-lg-left">
+               <div *ngFor="let imageid of gamedata.screenshots;let ind=index " class="col-lg-4 col-md-4 col-6">
+                  <a href="{{gamedata.screenshots[ind].image}} " data-lity class="d-block mb-3 h-100">
+                     <img class="thumb-gallery shadow-sm rounded" src="{{gamedata.screenshots[ind].image}}"
+                        alt="{{imageid.image}} Thumbnail {{ind+1}} ">
+                  </a>
+               </div>
+            </div>
+            <h3 class="font-weight-dark text-center text-lg-left mt-5 mb-0">Minimum System Requirements <span
+                  class="small text-muted">({{gamedata.platform}})</span> </h3>
+            <hr class="mt-2 mb-3">
+            <div class="row">
+               <div class="col-sm-6">
+                  <span class="text-muted">OS<br></span>
+                  <p>{{gamedata.minimum_system_requirements.os}}</p>
+                  <span class="text-muted">Memory<br></span>
+                  <p>{{gamedata.minimum_system_requirements.memory}}</p>
+                  <span class="text-muted">Storage<br></span>
+                  <p>{{gamedata.minimum_system_requirements.storage}}</p>
+               </div>
+               <div class="col-sm-6">
+                  <span class="text-muted">Processor<br></span>
+                  <p>{{gamedata.minimum_system_requirements.processor}}</p>
+                  <span class="text-muted">Graphics<br></span>
+                  <p>{{gamedata.minimum_system_requirements.graphics}}</p>
+                  <span class="text-muted">Additional Notes<br></span>
+                  <p>Specifications may change during development</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -13,6 +13,10 @@ box-shadow: 1px 1px 2px 1px rgba(0, 0, 255, .2);
     transform: scale(1.02);
     transition-duration: 0.3s;
 }
+.card-img-top {
+    width: 100%;
+    object-fit: cover;
+}
 img:hover{
     opacity: 0.5;
 }
@@ -29,18 +33,27 @@ h3{
     /* height: 28px; */
 }
 
-.card-img-top {
-    width: 100%;
-    object-fit: cover;
+
+#delete{
+    color: tomato;
 }
-.saveToLibrary:hover{
-    color:#9726fc;
-    
-    
-}
-.saveToLibrary{
-   font-size: 25px;
+#delete:hover{
     color: black;
+    transform: scale(1.03);
+}
+#edit{
+color: #ffc078;
+}
+
+
+#edit:hover{
+    color: black;
+    transform: scale(1.03);
+}
+
+
+.icon{
+   font-size: 30px;
     
 }
 
