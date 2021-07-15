@@ -33,13 +33,13 @@
         <p class="d-inline fs-5 "> games</p>
       </a>
     </li>
-    <li class="nav-item" *ngIf="!dob.getUserLoginStatus()">
+    <li class="nav-item" *ngIf="!dob.status">
       <a class="nav-link"  routerLink="signin" routerLinkActive="active" style="color:#FD0048">
         <span><i class="fas fa-user pe-2" style="font-size: 1.5em;"></i></span>
         <p class="d-inline fs-5 "> Signin/Signup</p>
       </a>
     </li>
-    <li class="nav-item" *ngIf="dob.getUserLoginStatus()">
+    <li class="nav-item" *ngIf="dob.status">
       <a class="nav-link"  routerLink="signin" routerLinkActive="active" style="color:#ff8100" (click)="dob.userLogout()">
         <span><i class="fas fa-user pe-2" style="font-size: 1.5em;" ></i></span>
         <p class="d-inline fs-5 ">Signout</p>

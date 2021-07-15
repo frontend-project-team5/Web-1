@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, UrlSerializer } from '@angular/router';
 import { BodyComponent } from './body/body.component';
 import { GameappdisplayComponent } from './gameappdisplay/gameappdisplay.component';
 import { GamesComponent } from './games/games.component';
@@ -10,6 +10,7 @@ import { MymoviesComponent } from './mymovies/mymovies.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { RegisterComponent } from './register/register.component';
 import { SigninComponent } from './signin/signin.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -24,11 +25,14 @@ const routes: Routes = [
   {path:"signup",component:RegisterComponent},
   {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:':id',component:GameappdisplayComponent},
+  {path:'user-profile/:name',component:UserProfileComponent,children:[{path:"games",component:GamesComponent},
+  {path:'',redirectTo:'games',pathMatch:'full'}]},
+  { path: 'user-profile/:name/library', loadChildren: () => import('./library/library.module').then(m => m.LibraryModule) },
   {path:'**',component:PagenotfoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash:true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

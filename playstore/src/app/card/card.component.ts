@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Data, Router } from '@angular/router';
 import { DataService } from '../data.service';
 import { displaygame } from '../Models/displaygame.model';
 
@@ -22,8 +22,8 @@ export class CardComponent implements OnInit {
     release_date : "",
     freetogame_profile_url : "",
   };
-
-  constructor(private ROUTER:Router){
+  cartObj:any
+  constructor(private ROUTER:Router,private dsobj:DataService){
   }
   ngOnInit(): void{
   }
@@ -41,6 +41,22 @@ export class CardComponent implements OnInit {
       else{
       this.ROUTER.navigateByUrl(url);
       }
+    }
+    onCart(product){
+      if(localStorage.getItem("email")==null)
+      {alert("Signin to save to library")
+      this.ROUTER.navigateByUrl("signin");
+    }
+    else
+    {  this.cartObj={"name":localStorage.getItem("name"),
+                      "email":localStorage.getItem("email"),
+                      "productObj":product}
+        console.log("in card ts",this.cartObj)
+      this.dsobj.pushToCart(this.cartObj).subscribe(
+        res=>{alert(res.message)},
+        err=>{console.log("error in pushing to cart",err)}
+      )
+    }
     }
 
 }

@@ -50,14 +50,14 @@
                     </a>
                   </li>
 
-                  <li class="nav-item" *ngIf="!dob.getUserLoginStatus()">
+                  <li class="nav-item" *ngIf="!dob.status">
                     <a class="nav-link" routerLink="signin" routerLinkActive="active" style="color:#FD0048">
                       <p class="d-inline "> signin/signup</p>
                       <span> <i class="fas fa-user pe-2"></i></span>
                     </a>
                   </li>
 
-                  <li class="nav-item" *ngIf="dob.getUserLoginStatus()">
+                  <li class="nav-item" *ngIf="dob.status">
                     <a class="nav-link" routerLink="signin" routerLinkActive="active" style="color:#FD0048" (click)="dob.userLogout()">
                       <p class="d-inline "> Logout</p>
                       <span> <i class="fas fa-user pe-2"></i></span>

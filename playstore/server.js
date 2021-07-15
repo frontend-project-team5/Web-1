@@ -25,7 +25,13 @@ mc.connect(databaseurl,{useNewUrlParser:true,useUnifiedTopology:true},(err,clien
 
         //creating collection object
         colobj=dbobj.collection("users")
+        cartobj=dbobj.collection("cart products")
         app.set("userobj",colobj)
+        app.set("usersproductsobj",cartobj)
         console.log("database connection successfull")
     }
 })
+
+const userapi=require("./APIS/user-api")
+
+app.use("/user",userapi)
