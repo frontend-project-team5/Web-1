@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminGuard } from './admin.guard';
 import { BodyComponent } from './body/body.component';
 import { GameappdisplayComponent } from './gameappdisplay/gameappdisplay.component';
 import { GamesComponent } from './games/games.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:"games",component:GamesComponent},
   {path:"signup",component:RegisterComponent},
   {path:'',redirectTo:'/home',pathMatch:'full'},
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),canActivate:[AdminGuard] },
   {path:':id',component:GameappdisplayComponent},
   {path:'**',component:PagenotfoundComponent}
 ];

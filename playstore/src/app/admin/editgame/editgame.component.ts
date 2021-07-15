@@ -1,15 +1,14 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NEVER } from 'rxjs';
-import { GamesService } from '../games.service';
-import { gameattributes } from '../Models/game.model';
+import { GamesService } from 'src/app/games.service';
+import { gameattributes } from 'src/app/Models/game.model';
 
 @Component({
-  selector: 'app-gameappdisplay',
-  templateUrl: './gameappdisplay.component.html',
-  styleUrls: ['./gameappdisplay.component.css']
+  selector: 'app-editgame',
+  templateUrl: './editgame.component.html',
+  styleUrls: ['./editgame.component.css']
 })
-export class GameappdisplayComponent implements OnInit {
+export class EditgameComponent implements OnInit {
 
   gamedata :gameattributes={
     id: "",
@@ -68,13 +67,5 @@ export class GameappdisplayComponent implements OnInit {
       }
     )
   }
-  moveToPLay(url:string){
-    if(localStorage.getItem("email")==null){
-      alert("please sign in to your acoutn");
-      this.ROUTER.navigateByUrl('signin');
-    }
-    else{
-      window.open(url);
-    }
-  }
+
 }

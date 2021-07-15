@@ -1,14 +1,14 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataService } from '../data.service';
-import { displaygame } from '../Models/displaygame.model';
+import { displaygame } from 'src/app/Models/displaygame.model';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'app-gamecard',
+  templateUrl: './gamecard.component.html',
+  styleUrls: ['./gamecard.component.css']
 })
-export class CardComponent implements OnInit {
+export class GamecardComponent implements OnInit {
+
   @Input() pro:displaygame={
     id : 0,
     title : "",
@@ -29,8 +29,7 @@ export class CardComponent implements OnInit {
   }
 
     getDetailsOfGame(id:any){
-      console.log(id);
-      this.ROUTER.navigateByUrl('/'+id);
+      this.ROUTER.navigateByUrl('/viewgames'+id);
     }
 
     playVerify(url:string){
@@ -43,4 +42,7 @@ export class CardComponent implements OnInit {
       }
     }
 
+    editgame(id:number){
+      this.ROUTER.navigateByUrl('admin/editgame/'+id);
+    }
 }

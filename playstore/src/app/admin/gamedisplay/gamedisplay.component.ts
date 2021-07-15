@@ -1,15 +1,14 @@
-import { Component, OnInit,Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { NEVER } from 'rxjs';
-import { GamesService } from '../games.service';
-import { gameattributes } from '../Models/game.model';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { GamesService } from 'src/app/games.service';
+import { gameattributes } from 'src/app/Models/game.model';
 
 @Component({
-  selector: 'app-gameappdisplay',
-  templateUrl: './gameappdisplay.component.html',
-  styleUrls: ['./gameappdisplay.component.css']
+  selector: 'app-gamedisplay',
+  templateUrl: './gamedisplay.component.html',
+  styleUrls: ['./gamedisplay.component.css']
 })
-export class GameappdisplayComponent implements OnInit {
+export class GamedisplayComponent implements OnInit {
 
   gamedata :gameattributes={
     id: "",
@@ -54,7 +53,7 @@ export class GameappdisplayComponent implements OnInit {
   };
   // gamedata:any;
   UserSubscription:any;
-  constructor(private ActivRouter:ActivatedRoute,private Ser2:GamesService,private ROUTER:Router) { }
+  constructor(private ActivRouter:ActivatedRoute,private Ser2:GamesService) { }
 
   ngOnInit(): void {
     let ind=this.ActivRouter.snapshot.params.id;
@@ -68,13 +67,5 @@ export class GameappdisplayComponent implements OnInit {
       }
     )
   }
-  moveToPLay(url:string){
-    if(localStorage.getItem("email")==null){
-      alert("please sign in to your acoutn");
-      this.ROUTER.navigateByUrl('signin');
-    }
-    else{
-      window.open(url);
-    }
-  }
+
 }

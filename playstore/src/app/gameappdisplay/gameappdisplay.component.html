@@ -9,6 +9,9 @@
                     <img class="img2 card-img-top progressive replace" width="100%" src="{{gamedata.thumbnail}} " alt="">
                  </div>
               </div>
+              <div>
+                 <button (click)="moveToPLay(gamedata.freetogame_profile_url)" style="background-color: rgb(82, 82, 236);color: #fff;"> play </button>
+              </div>
            </div>
            <div class=" col-xl-8">
               <span class="small"><a class="nocolor" href="/">Home</a> &gt; <a class="nocolor" href="/games">Games</a> &gt; <span class="text-muted">{{gamedata.title}}</span></span> 
