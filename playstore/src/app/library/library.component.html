@@ -1,0 +1,22 @@
+<h1>my library</h1>
+<button (click)="onBack()">go back to games</button>
+<div *ngIf="cart.cartProducts.length===0">
+cart empty
+</div>
+
+<table class="table text-center w-75 mx-auto mt-5 text-dark " *ngIf="cart.cartProducts.length!=0">
+    <thead>
+        <th>Name</th>
+        <th>MRP</th>
+        <th>image</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of cart.cartProducts;let ind=index">
+            <td>{{product.title}}</td>
+            <td>{{product.genre}}</td>
+            <td><img src="{{product.thumbnail}}" alt="" width="100px"></td>
+            <td><button (click)="ondelete(ind)">delete</button></td>
+        </tr>
+    </tbody>
+</table>
+

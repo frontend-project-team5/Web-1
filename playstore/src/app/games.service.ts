@@ -42,4 +42,6 @@ export class GamesService {
     return this.hc.get<displaygame[]>("https://free-to-play-games-database.p.rapidapi.com/api/games", { headers: header, params: param });
   }
 
+ 
+
 }

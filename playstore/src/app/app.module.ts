@@ -22,6 +22,8 @@ import { GameappdisplayComponent } from './gameappdisplay/gameappdisplay.compone
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './search.pipe';
 import { SharedModule } from './shared/shared.module';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { SharedModule } from './shared/shared.module';
     GamesComponent,
     CardComponent,
     GameappdisplayComponent,
+    UserProfileComponent,
+    CartComponent,
 
   ],
   imports: [
