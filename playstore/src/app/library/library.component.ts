@@ -27,7 +27,7 @@ userName:string;
   }
   onBack()
   {
-    this.router.navigateByUrl(`user-profile/${this.userName}/games`)
+    this.router.navigateByUrl(`user-profile/${this.userName}/games`);
   }
   ondelete(ind)
   { console.log(this.cart.cartProducts,ind)

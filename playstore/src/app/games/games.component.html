@@ -2,7 +2,6 @@
   <div class="row pt-3 px-3">
     <div class="col-6 col-sm-3">
       <span class="mr-1 text-muted">Platform:</span>
-
       <select name="platform" class="form-select" [(ngModel)]="gamePlatform">
         <option value="all">ALl platforms</option>
         <option value="pc">Pc</option>
@@ -84,8 +83,8 @@
     <p style="color: rgb(255, 255, 255);">apple</p>
   </div>
 </div>
-<h1 *ngIf="!gameList.length">
-  nogames Found
+<h1 class="text-center" *ngIf="!gameList.length">
+  No games Found
 </h1>
 
 <div class="text-center">

@@ -1,7 +1,17 @@
-<h1>my library</h1>
-<button (click)="onBack()">go back to games</button>
-<div *ngIf="cart.cartProducts.length===0">
-cart empty
+<h1 class="text-center display-1">
+    
+    My Library</h1>
+<br>
+<a (click)="onBack()"> <h4><- go back to games</h4> </a>
+<div class="d-flex justify-content-center" *ngIf="cart.cartProducts.length===0">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="display-3 ">Cart is Empty
+
+        <br>
+    </h1>
 </div>
 
 <table class="table text-center w-75 mx-auto mt-5 text-dark " *ngIf="cart.cartProducts.length!=0">
