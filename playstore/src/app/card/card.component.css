@@ -34,13 +34,17 @@ h3{
     object-fit: cover;
 }
 .saveToLibrary:hover{
-    color:#9726fc;
+    color:#bf85f1;
+    background-color: blueviolet;
     
     
 }
 .saveToLibrary{
    font-size: 20px;
     color: black;
+    background-color: black;
+    padding:5px;
+    border-radius: 4px;
     
 }
 
