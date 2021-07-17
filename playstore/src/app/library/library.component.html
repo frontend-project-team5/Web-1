@@ -1,20 +1,21 @@
-<h1 class="text-center display-1">
+<div class="container bg-secondary text-white">
+<h1 class="text-center ">
     
-    My Library</h1>
+    Saved Games</h1>
 <br>
-<a (click)="onBack()"> <h4><- go back to games</h4> </a>
+<a class="btn text-decoration-underline text-white"  (click)="onBack()"> <h4><- go back to games</h4> </a>
 <div class="d-flex justify-content-center" *ngIf="cart.cartProducts.length===0">
     <br>
     <br>
     <br>
     <br>
-    <h1 class="display-3 ">Cart is Empty
+    <h1 class="text-white">no games saved
 
         <br>
     </h1>
 </div>
 
-<table class="table text-center w-75 mx-auto mt-5 text-dark " *ngIf="cart.cartProducts.length!=0">
+<table class="table text-center w-75 mx-auto mt-5 text-white " *ngIf="cart.cartProducts.length!=0">
     <thead>
         <th>Name</th>
         <th>MRP</th>
@@ -25,8 +26,8 @@
             <td>{{product.title}}</td>
             <td>{{product.genre}}</td>
             <td><img src="{{product.thumbnail}}" alt="" width="100px"></td>
-            <td><button (click)="ondelete(ind)">delete</button></td>
+            <td><button (click)="ondelete(ind)"><i class="fas fa-trash"></i></button></td>
         </tr>
     </tbody>
 </table>
-
+</div>

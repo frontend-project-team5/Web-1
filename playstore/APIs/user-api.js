@@ -80,7 +80,7 @@ userapi.post("/add-to-cart",expresserr(async(req,res)=>{
         console.log(userProColObj)
         //update document
         await proObj.updateOne({username:newobj.username},{$set:{...userProColObj}})
-        res.send({message:" product added to library"})
+        res.send({message:" game saved"})
     }
 }))
 
