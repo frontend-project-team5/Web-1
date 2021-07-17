@@ -21,7 +21,11 @@ export class RegisterComponent implements OnInit {
     console.log("form submitted")
     let temp=ref.value;
     localStorage.setItem("email",temp.email);
-    
+    const words = temp.name.split(" ");
+for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substr(1);   
+}
+    temp.name=words.join("");
     console.log(temp);
     this.dsobj.registerUser(temp).subscribe(
       res=>{
