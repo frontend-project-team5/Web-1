@@ -30,7 +30,7 @@
     </div>
     <div class="col col-sm-3">
       <br>
-      <button class="filterbtn" type="submit" (click)="gameFilter()">Submit</button>
+      <button class="filterbtn" type="submit" (click)="gameFilter()">filter</button>
 
     </div>
   </div>
@@ -75,7 +75,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div> -->
-<input class="float-end pe-5 pt-3 form-control" type="text" [(ngModel)]="searchItem" placeholder="search for game" style="width: 300px;height:40px;font-size: 30px;" >
+<input class="float-end pe-5 pt-3 form-control" type="text" [(ngModel)]="searchItem" placeholder="search for game" style="width: 300px;height:40px;font-size: 20px;" >
 <div class="row row-cols-1 row-cols-sm-2  row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-4 g-4 mt-5  ne-3">
   <div *ngFor="let a of gameList  | search:searchItem | paginate:{itemsPerPage :12 ,currentPage:p} " class="col">
 
